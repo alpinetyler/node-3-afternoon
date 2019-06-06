@@ -15,11 +15,11 @@ massive(CONNECTION_STRING).then(dbInstance => {
 }).catch(err => console.log(err));
 
 
-app.post('/api/product', ProdCtrl.create)
-app.get('/api/product', ProdCtrl.getAll)
-app.get('/api/product/:id', ProdCtrl.getOne)
-app.put('/api/product/:id?desc=', ProdCtrl.update)
-app.delete('/api/product/:id', ProdCtrl.delete)
+app.post('/api/products', ProdCtrl.create)
+app.get('/api/products', ProdCtrl.getAll)
+app.get('/api/products/:id', ProdCtrl.getOne)
+app.put('/api/products/:id', ProdCtrl.update)
+app.delete('/api/products/:id', ProdCtrl.delete)
 
 
 
