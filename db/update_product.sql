@@ -1,9 +1,5 @@
 UPDATE product 
-SET 
-name = ${name},
-description = ${description},
-price = ${price},
-image_url = ${image_url}
+SET description = ${description} 
 WHERE product_id = ${id};
 
 SELECT * FROM product

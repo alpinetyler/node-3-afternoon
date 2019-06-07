@@ -34,11 +34,9 @@ module.exports = {
 
     update: (req, res, next) => {
         const dbInstance = req.app.get('db');
-        const {id} = req.params;
-        let product = req.body
-        product.id = id
-        console.log(product)
-        dbInstance.update_product(product)
+        const {params, query} = req;
+        console.log(req)
+        dbInstance.update_product([params.id, query.desc])
             .then((response) => res.status(200).send(response))
             .catch(err => console.log(err))
     },
